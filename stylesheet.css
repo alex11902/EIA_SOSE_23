@@ -41,4 +41,5 @@ body{
     font-weight:bolder;
     color: aqua;
     transform: scale(1.3);
+    border-radius: 12px solid black;
   }
