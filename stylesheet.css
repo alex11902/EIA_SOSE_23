@@ -11,3 +11,34 @@ body{
     box-sizing: inherit;
 
 }
+.button{
+
+    background-color: #ffffff00; /* none */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 4px 2px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    font-family: 'Courier New';
+    z-index: 1;
+    
+  }
+  
+  .button1 {
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    float: left;
+    margin-top: 2%;
+    }
+  
+  .button1:hover {
+    font-weight:bolder;
+    color: aqua;
+    transform: scale(1.3);
+  }
