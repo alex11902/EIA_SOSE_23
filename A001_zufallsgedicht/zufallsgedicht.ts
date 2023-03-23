@@ -24,6 +24,16 @@ namespace zufallsgedicht {
 
         let verse: string = "alohomora";
 
+        let verseZahl: number;
+
+        verseZahl = Math.floor(Math.random() * _subjects.length);
+        let versSubjekt: string[] = _subjects.splice(verseZahl, 1);
+
+        verseZahl = Math.floor(Math.random() * _predicates.length);
+        let versPredikat: string[] = _predicates.splice(verseZahl, 1);
+
+        verseZahl = Math.floor(Math.random() * _objects.length);
+        let versobjekt: string[] = _objects.splice(verseZahl, 1);
 
 
 
