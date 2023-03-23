@@ -33,9 +33,9 @@ namespace zufallsgedicht {
         let versPredikat: string[] = _predicates.splice(verseZahl, 1);
 
         verseZahl = Math.floor(Math.random() * _objects.length);
-        let versobjekt: string[] = _objects.splice(verseZahl, 1);
+        let versObjekt: string[] = _objects.splice(verseZahl, 1);
 
-        verse = versSubjekt + " " + versPredikat + " " + versobjekt;
+        verse = versSubjekt + " " + versObjekt + " " + versPredikat;
 
         return verse;
 

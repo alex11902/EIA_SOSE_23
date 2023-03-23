@@ -21,8 +21,8 @@ var zufallsgedicht;
         verseZahl = Math.floor(Math.random() * _predicates.length);
         let versPredikat = _predicates.splice(verseZahl, 1);
         verseZahl = Math.floor(Math.random() * _objects.length);
-        let versobjekt = _objects.splice(verseZahl, 1);
-        verse = versSubjekt + " " + versPredikat + " " + versobjekt;
+        let versObjekt = _objects.splice(verseZahl, 1);
+        verse = versSubjekt + " " + versObjekt + " " + versPredikat;
         return verse;
     }
 })(zufallsgedicht || (zufallsgedicht = {}));
