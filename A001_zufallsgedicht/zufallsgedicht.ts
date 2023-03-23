@@ -16,13 +16,19 @@ namespace zufallsgedicht {
 
     for (let index: number = subjects.length; index >= 0; index--) {
 
-        console.log(subjects, objects, predicates);
+        console.log(getVerse(subjects, objects, predicates));
 
     }
 
-    function getVerse(_subjects: string[], _predicates: string[], _objects: string[]) {
+    function getVerse(_subjects: string[], _predicates: string[], _objects: string[]): string {
 
-        console.log();
+        let verse: string = "alohomora";
+
+
+
+
+        return verse;
+
 
     }
 
