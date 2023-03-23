@@ -35,7 +35,7 @@ namespace zufallsgedicht {
         verseZahl = Math.floor(Math.random() * _objects.length);
         let versobjekt: string[] = _objects.splice(verseZahl, 1);
 
-
+        verse = versSubjekt + " " + versPredikat + " " + versobjekt;
 
         return verse;
 
