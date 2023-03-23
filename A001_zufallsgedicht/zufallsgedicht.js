@@ -6,8 +6,8 @@ var zufallsgedicht;
     let predicates;
     let objects;
     subjects = ["Harry", "Hermine", "Hagrid", "Tom Riddle", "Snape", "Dumbledore"];
-    predicates = ["hasst", " liebt", "verzaubert", "studiert", "bewundert", "zerstoert"];
-    objects = ["Zaubertraenke", "deine Mom", "Dementoren", "den Zeitumkehrer", "das Spaghettimonster", "seinen Vater"];
+    objects = ["hasst", " liebt", "verzaubert", "studiert", "bewundert", "zerstoert"];
+    predicates = ["Zaubertraenke", "deine Mom", "Dementoren", "den Zeitumkehrer", "das Spaghettimonster", "seinen Vater"];
     console.log(subjects, predicates, objects);
     //sooo jetzt iterieren wir durch eine schleife
     for (let index = subjects.length; index >= 0; index--) {
