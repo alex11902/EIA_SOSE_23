@@ -22,7 +22,7 @@ namespace zufallsgedicht {
 
     function getVerse(_subjects: string[], _predicates: string[], _objects: string[]): string {
 
-        let verse: string = "alohomora";
+        let verse: string = "";
 
         let verseZahl: number;
 

@@ -6,15 +6,15 @@ var zufallsgedicht;
     let predicates;
     let objects;
     subjects = ["Harry", "Hermine", "Hagrid", "Tom Riddle", "Snape", "Dumbledore"];
-    objects = ["hasst", " liebt", "verzaubert", "studiert", "bewundert", "zerstoert"];
-    predicates = ["Zaubertraenke", "deine Mom", "Dementoren", "den Zeitumkehrer", "das Spaghettimonster", "seinen Vater"];
+    predicates = ["hasst", " liebt", "verzaubert", "studiert", "bewundert", "zerstoert"];
+    objects = ["Zaubertraenke", "deine Mom", "Dementoren", "den Zeitumkehrer", "das Spaghettimonster", "seinen Vater"];
     console.log(subjects, predicates, objects);
     //sooo jetzt iterieren wir durch eine schleife
     for (let index = subjects.length; index >= 0; index--) {
         console.log(getVerse(subjects, objects, predicates));
     }
     function getVerse(_subjects, _predicates, _objects) {
-        let verse = "alohomora";
+        let verse = "";
         let verseZahl;
         verseZahl = Math.floor(Math.random() * _subjects.length);
         let versSubjekt = _subjects.splice(verseZahl, 1);
@@ -22,7 +22,7 @@ var zufallsgedicht;
         let versPredikat = _predicates.splice(verseZahl, 1);
         verseZahl = Math.floor(Math.random() * _objects.length);
         let versObjekt = _objects.splice(verseZahl, 1);
-        verse = versSubjekt + " " + versObjekt + " " + versPredikat;
+        verse = versSubjekt + " " + versPredikat + " " + versObjekt;
         return verse;
     }
 })(zufallsgedicht || (zufallsgedicht = {}));
