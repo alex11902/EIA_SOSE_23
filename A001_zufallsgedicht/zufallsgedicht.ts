@@ -14,7 +14,7 @@ namespace zufallsgedicht {
 
     //sooo jetzt iterieren wir durch eine schleife
 
-    for (let index: number = subjects.length; index >= 1; index--) {
+    for (let index: number = subjects.length; index >=2; index--) {
 
         console.log(getVerse(subjects, predicates, objects));
 
