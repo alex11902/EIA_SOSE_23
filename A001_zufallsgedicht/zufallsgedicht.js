@@ -11,7 +11,7 @@ var zufallsgedicht;
     console.log(subjects, predicates, objects);
     //sooo jetzt iterieren wir durch eine schleife
     for (let index = subjects.length; index >= 0; index--) {
-        console.log(getVerse(subjects, objects, predicates));
+        console.log(getVerse(subjects, predicates, objects));
     }
     function getVerse(_subjects, _predicates, _objects) {
         let verse = "";

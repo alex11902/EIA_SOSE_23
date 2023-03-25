@@ -16,7 +16,7 @@ namespace zufallsgedicht {
 
     for (let index: number = subjects.length; index >= 0; index--) {
 
-        console.log(getVerse(subjects, objects, predicates));
+        console.log(getVerse(subjects, predicates, objects));
 
     }
 
