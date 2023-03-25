@@ -1,6 +1,12 @@
 "use strict";
 var zufallsgedicht;
 (function (zufallsgedicht) {
+    /* Aufgabe: 01-Zufallsgedicht
+    Name: Alexander Vincent Holstein
+    Matrikel: 271466
+    Datum: 25.03.2023
+    Quellen: -
+    */
     // initialisierung von arrays von strings
     let subjects;
     let predicates;
@@ -9,7 +15,7 @@ var zufallsgedicht;
     predicates = ["hasst", "liebt", "verzaubert", "studiert", "bewundert", "zerstoert"];
     objects = ["Zaubertraenke", "deine Mom", "Dementoren", "den Zeitumkehrer", "das Spaghettimonster", "seinen Vater"];
     console.log(subjects, predicates, objects);
-    //sooo jetzt iterieren wir durch eine schleife
+    //schleife wird initialisiert
     for (let index = subjects.length; index >= 2; index--) {
         console.log(getVerse(subjects, predicates, objects));
     }
