@@ -10,7 +10,7 @@ var zufallsgedicht;
     objects = ["Zaubertraenke", "deine Mom", "Dementoren", "den Zeitumkehrer", "das Spaghettimonster", "seinen Vater"];
     console.log(subjects, predicates, objects);
     //sooo jetzt iterieren wir durch eine schleife
-    for (let index = subjects.length; index >= 1; index--) {
+    for (let index = subjects.length; index >= 2; index--) {
         console.log(getVerse(subjects, predicates, objects));
     }
     function getVerse(_subjects, _predicates, _objects) {
