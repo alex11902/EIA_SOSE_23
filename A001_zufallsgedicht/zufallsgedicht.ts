@@ -6,7 +6,7 @@ namespace zufallsgedicht {
     let objects: string[];
 
     subjects = ["Harry", "Hermine", "Hagrid", "Tom Riddle", "Snape", "Dumbledore"];
-    predicates = ["hasst",  " liebt", "verzaubert", "studiert", "bewundert", "zerstoert"];
+    predicates = ["hasst",  "liebt", "verzaubert", "studiert", "bewundert", "zerstoert"];
     objects = ["Zaubertraenke", "deine Mom", "Dementoren", "den Zeitumkehrer", "das Spaghettimonster", "seinen Vater"];
 
 
