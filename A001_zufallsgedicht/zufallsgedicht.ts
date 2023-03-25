@@ -1,5 +1,12 @@
 namespace zufallsgedicht {
 
+/* Aufgabe: 01-Zufallsgedicht
+Name: Alexander Vincent Holstein
+Matrikel: 271466
+Datum: 25.03.2023
+Quellen: -
+*/
+
     // initialisierung von arrays von strings
     let subjects: string[];
     let predicates: string[];
@@ -12,7 +19,7 @@ namespace zufallsgedicht {
 
     console.log(subjects, predicates, objects);
 
-    //sooo jetzt iterieren wir durch eine schleife
+    //schleife wird initialisiert
 
     for (let index: number = subjects.length; index >=2; index--) {
 
