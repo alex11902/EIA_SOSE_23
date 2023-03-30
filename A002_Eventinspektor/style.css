@@ -1,0 +1,65 @@
+html{
+    margin: 0px;
+}
+
+
+body{ 
+
+background-color: rebeccapurple;
+
+height: 750px;
+width: 1000px;
+
+}
+
+h1{
+
+    color: bisque;
+    font-family: Avenir,Arial;
+    justify-content: center;
+    position:inherit;
+    margin: 1%;
+
+
+}
+
+
+div{
+
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 40%;
+    max-height: 40%;
+    display: flex;
+    justify-content:center;
+   
+}
+
+#div0{
+
+    
+    min-width: 200px;
+    min-height: 200px;
+    background-color: moccasin;
+    float: left;
+    margin: 5%;
+
+}
+
+#div1{
+
+    float: right;
+    margin:auto;
+    min-width: 200px;
+    min-height: 200px;
+    background-color: teal;
+    margin: 5%;
+
+
+}
+
+span{
+
+    position: fixed;
+
+}
