@@ -25,7 +25,7 @@ body {
 .button1:hover {
 
   font-weight: bolder;
-  color: aqua;
+  background-color: maroon;
   transform: scale(1.1);
   border-radius: 12px solid black;
 
