@@ -27,6 +27,9 @@ var Eventinspector;
     }
     function setInfoBox(_event) {
         let span = document.querySelector("span");
+        if (_event.target === span) {
+            return;
+        }
         console.log(span);
         let posX = "" + _event.clientX + "";
         let posY = "" + _event.clientY + "";
