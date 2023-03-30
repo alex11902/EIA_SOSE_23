@@ -70,6 +70,7 @@ span{
 }
 button{
 
+    border: none;
     width: 45px;
     height: 45px;
     border-radius: 8px;
