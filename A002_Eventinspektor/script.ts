@@ -46,8 +46,7 @@ namespace Eventinspector {
         console.log(span);
         let posX: number = _event.clientX;
         let posY: number = _event.clientY;
-
-        span.innerHTML = " "+ posX+" "+posY;
+        span.innerHTML = " "+ posX + " " + posY;
 
 
 
