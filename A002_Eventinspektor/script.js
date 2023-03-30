@@ -28,9 +28,17 @@ var Eventinspector;
     function setInfoBox(_event) {
         let span = document.querySelector("span");
         console.log(span);
-        let posX = _event.clientX;
-        let posY = _event.clientY;
-        span.innerHTML = " " + posX + " " + posY;
+        let posX = "" + _event.clientX + "";
+        let posY = "" + _event.clientY + "";
+        span.innerHTML = "posX: " + posX + " posY:" + posY + " Target:" + _event.target;
+        let offsetX = _event.clientX + 20;
+        let offsetY = _event.clientY + 20;
+        span.style.left = offsetX + "px";
+        span.style.top = offsetY + "px";
+    }
+    function customEvent(_event) {
+        let button1 = document.querySelector("button");
+        button1.addEventListener("click", logInfo);
     }
     function logInfo(_event) {
         console.log(_event.type);

@@ -1,3 +1,5 @@
+
+
 html{
     margin: 0px;
 }
@@ -37,7 +39,7 @@ div{
 
 #div0{
 
-    
+    border-radius: 12px;
     min-width: 200px;
     min-height: 200px;
     background-color: moccasin;
@@ -48,6 +50,7 @@ div{
 
 #div1{
 
+    border-radius: 12px;
     float: right;
     margin:auto;
     min-width: 200px;
@@ -61,5 +64,17 @@ div{
 span{
 
     position: fixed;
+    font-family: Avenir,Arial;
+    font-size: medium;
+
+}
+button{
+
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    background-color: teal;
+    font-family: Avenir, Arial;
+    margin: auto;
 
 }

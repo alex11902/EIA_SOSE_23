@@ -39,20 +39,31 @@ namespace Eventinspector {
 
 
 
-
     function setInfoBox(_event: MouseEvent): void {
 
         let span: HTMLSpanElement = <HTMLSpanElement>document.querySelector("span");
+
         console.log(span);
-        let posX: number = _event.clientX;
-        let posY: number = _event.clientY;
-        span.innerHTML = " "+ posX + " " + posY;
+
+        let posX: string = "" + _event.clientX + "";
+        let posY: string = "" + _event.clientY + "";
+        span.innerHTML = "posX: " + posX + " posY:" + posY + " Target:" + _event.target;
+
+        let offsetX: number = _event.clientX + 20;
+        let offsetY: number = _event.clientY + 20;
+        span.style.left = offsetX + "px";
+        span.style.top = offsetY + "px";
+
+    }
+
+    function customEvent(_event: Event): void {
+
+        let button1: HTMLButtonElement = <HTMLButtonElement>document.querySelector("button");
+        button1.addEventListener("click", logInfo);
 
 
 
     }
-
-
 
 
 
