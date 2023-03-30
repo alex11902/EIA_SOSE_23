@@ -42,7 +42,9 @@ namespace Eventinspector {
     function setInfoBox(_event: MouseEvent): void {
 
         let span: HTMLSpanElement = <HTMLSpanElement>document.querySelector("span");
-
+        if (_event.target === span) {
+            return;
+        }
         console.log(span);
 
         let posX: string = "" + _event.clientX + "";
