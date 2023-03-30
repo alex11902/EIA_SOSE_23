@@ -1,23 +1,32 @@
-html{
-    margin: 0px;
+html {
+  margin: 0px;
 }
 
-body{
+body {
 
-    background-color: teal;
-    padding: 1%;
-    font-family: avenir, arial;
-    color: burlywood;
-    box-sizing: inherit;
+  background-color: teal;
+  padding: 1%;
+  font-family: avenir, arial;
+  color: burlywood;
+  box-sizing: inherit;
 
 }
 
-  
-  .button1:hover {
+.button1 {
 
-    font-weight:bolder;
-    color: aqua;
-    transform: scale(1.1);
-    border-radius: 12px solid black;
+  background-color: chocolate;
+  border: none;
+  border-radius: 8px;
+  font-family: Avenir, Arial;
+  color: chartreuse;
 
-  }
+}
+
+.button1:hover {
+
+  font-weight: bolder;
+  color: aqua;
+  transform: scale(1.1);
+  border-radius: 12px solid black;
+
+}
