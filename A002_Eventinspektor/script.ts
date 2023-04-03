@@ -14,8 +14,8 @@ namespace Eventinspector {
 
     function handleLoad(): void {
 
-        let div0: HTMLElement = <HTMLElement>document.querySelector("div0");
-        let div1: HTMLElement = <HTMLElement>document.querySelector("div1");
+        let div0: HTMLElement = <HTMLElement>document.querySelector("#div0");
+        let div1: HTMLElement = <HTMLElement>document.querySelector("#div1");
         //eventlistener auf cursorbewegung
         document.addEventListener("mousemove", setInfoBox);
         // eventlistener auf click
@@ -34,6 +34,9 @@ namespace Eventinspector {
         div1.addEventListener("click", logInfo);
         div1.addEventListener("keyup", logInfo);
 
+        let button1: HTMLButtonElement = <HTMLButtonElement>document.querySelector("button1");
+        button1.addEventListener("customEvent", triggerEvent);
+        button1.addEventListener("click", dispatchEvent);
 
     }
 
@@ -42,10 +45,12 @@ namespace Eventinspector {
     function setInfoBox(_event: MouseEvent): void {
 
         let span: HTMLSpanElement = <HTMLSpanElement>document.querySelector("span");
+
         if (_event.target === span) {
             return;
         }
-        console.log(span);
+
+
 
         let posX: string = "" + _event.clientX + "";
         let posY: string = "" + _event.clientY + "";
@@ -58,17 +63,31 @@ namespace Eventinspector {
 
     }
 
-    function customEvent(_event: Event): void {
+    function customEvent(): void {
 
         let button1: HTMLButtonElement = <HTMLButtonElement>document.querySelector("button");
-        button1.addEventListener("click", logInfo);
+        let newEvent: Event = new Event("customEvent");
+
+        button1.dispatchEvent(newEvent);
 
 
 
     }
 
+    function dispatchEvent(): void {
 
 
+        customEvent();
+
+    }
+
+    function triggerEvent(_event: Event): void {
+
+
+        console.log(_event, " button geklickt");
+
+
+    }
 
 
     function logInfo(_event: Event) {

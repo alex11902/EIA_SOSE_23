@@ -10,8 +10,8 @@ var Eventinspector;
 (function (Eventinspector) {
     window.addEventListener("load", handleLoad);
     function handleLoad() {
-        let div0 = document.querySelector("div0");
-        let div1 = document.querySelector("div1");
+        let div0 = document.querySelector("#div0");
+        let div1 = document.querySelector("#div1");
         //eventlistener auf cursorbewegung
         document.addEventListener("mousemove", setInfoBox);
         // eventlistener auf click
@@ -24,13 +24,15 @@ var Eventinspector;
         div0.addEventListener("keyup", logInfo);
         div1.addEventListener("click", logInfo);
         div1.addEventListener("keyup", logInfo);
+        let button1 = document.querySelector("button1");
+        button1.addEventListener("customEvent", triggerEvent);
+        button1.addEventListener("click", dispatchEvent);
     }
     function setInfoBox(_event) {
         let span = document.querySelector("span");
         if (_event.target === span) {
             return;
         }
-        console.log(span);
         let posX = "" + _event.clientX + "";
         let posY = "" + _event.clientY + "";
         span.innerHTML = "posX: " + posX + " posY:" + posY + " Target:" + _event.target;
@@ -39,9 +41,16 @@ var Eventinspector;
         span.style.left = offsetX + "px";
         span.style.top = offsetY + "px";
     }
-    function customEvent(_event) {
+    function customEvent() {
         let button1 = document.querySelector("button");
-        button1.addEventListener("click", logInfo);
+        let newEvent = new Event("customEvent");
+        button1.dispatchEvent(newEvent);
+    }
+    function dispatchEvent() {
+        customEvent();
+    }
+    function triggerEvent(_event) {
+        console.log(_event, " button geklickt");
     }
     function logInfo(_event) {
         console.log(_event.type);
