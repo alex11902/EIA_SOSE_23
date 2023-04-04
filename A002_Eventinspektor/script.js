@@ -25,7 +25,7 @@ var Eventinspector;
         div1.addEventListener("click", logInfo);
         div1.addEventListener("keyup", logInfo);
         let button1 = document.querySelector("button");
-        button1.addEventListener("click", dispatchEvent);
+        button1.addEventListener("click", customEvent);
         document.addEventListener("customEvent", outputEvent);
     }
     function setInfoBox(_event) {

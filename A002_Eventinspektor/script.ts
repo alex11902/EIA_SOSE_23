@@ -36,7 +36,7 @@ namespace Eventinspector {
 
         let button1: HTMLButtonElement = <HTMLButtonElement>document.querySelector("button");
         
-        button1.addEventListener("click", dispatchEvent);
+        button1.addEventListener("click", customEvent);
         
         document.addEventListener("customEvent", outputEvent);
 
