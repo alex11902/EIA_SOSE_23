@@ -25,8 +25,8 @@ var Eventinspector;
         div1.addEventListener("click", logInfo);
         div1.addEventListener("keyup", logInfo);
         let button1 = document.querySelector("button");
-        button1.addEventListener("customEvent", triggerEvent);
         button1.addEventListener("click", dispatchEvent);
+        document.addEventListener("customEvent", outputEvent);
     }
     function setInfoBox(_event) {
         let span = document.querySelector("span");
@@ -46,11 +46,8 @@ var Eventinspector;
         let newEvent = new Event("customEvent");
         button1.dispatchEvent(newEvent);
     }
-    function dispatchEvent() {
+    function outputEvent() {
         customEvent();
-    }
-    function triggerEvent(_event) {
-        console.log(_event, " button geklickt");
     }
     function logInfo(_event) {
         console.log(_event.type);

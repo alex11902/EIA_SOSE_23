@@ -35,8 +35,10 @@ namespace Eventinspector {
         div1.addEventListener("keyup", logInfo);
 
         let button1: HTMLButtonElement = <HTMLButtonElement>document.querySelector("button");
-        button1.addEventListener("customEvent", triggerEvent);
+        
         button1.addEventListener("click", dispatchEvent);
+        
+        document.addEventListener("customEvent", outputEvent);
 
     }
 
@@ -75,17 +77,9 @@ namespace Eventinspector {
 
     }
 
-    function dispatchEvent(): void {
+    function outputEvent(): void {
 
         customEvent();
-
-    }
-
-    function triggerEvent(_event: Event): void {
-
-
-        console.log(_event, " button geklickt");
-
 
     }
 
