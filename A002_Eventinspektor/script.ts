@@ -66,6 +66,7 @@ namespace Eventinspector {
     function customEvent(): void {
 
         let button1: HTMLButtonElement = <HTMLButtonElement>document.querySelector("button");
+
         let newEvent: Event = new Event("customEvent");
 
         button1.dispatchEvent(newEvent);
@@ -75,7 +76,6 @@ namespace Eventinspector {
     }
 
     function dispatchEvent(): void {
-
 
         customEvent();
 
