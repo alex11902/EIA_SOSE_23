@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Responsive Webanwendung</title>
 	<link rel="stylesheet" href="style.css">
-	<!-- <link rel="icon" href="Ico.ico"> -->
+	<script src="script.js" defer></script>
 </head>
+
 <body>
 	<header>
 		<h1>Meine Responsive Webanwendung</h1>
@@ -18,13 +20,33 @@
 		</ul>
 	</nav>
 	<main>
-		<section>
-			<h2>Willkommen auf unserer Webseite!</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus lectus vel est tristique, non dapibus sapien volutpat.</p>
-		</section>
+		<ul id="my-list">
+			<li>
+				<label>
+					<input type="checkbox"> Element 1
+				</label>
+			</li>
+			<li>
+				<label>
+					<input type="checkbox"> Element 2
+				</label>
+			</li>
+			<li>
+				<label>
+					<input type="checkbox"> Element 3
+				</label>
+			</li>
+		</ul>
+
+		<form>
+			<input type="text" id="new-item">
+			<button type="button" onclick="addItem()">Hinzufügen</button>
+		</form>
+
 	</main>
 	<footer>
 		<p>&copy; 2023 EIA2</p>
 	</footer>
 </body>
+
 </html>
