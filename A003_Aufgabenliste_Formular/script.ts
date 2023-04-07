@@ -1,6 +1,6 @@
 
 
-function addItem():void {
+function addItem() {
     var input: HTMLInputElement = <HTMLInputElement>document.getElementById("new-item");
     var list: HTMLElement = <HTMLElement> document.getElementById("my-list");
     var item = document.createElement("li");
