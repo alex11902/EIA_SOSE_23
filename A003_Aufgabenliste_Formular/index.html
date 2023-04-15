@@ -1,52 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Responsive Webanwendung</title>
-	<link rel="stylesheet" href="style.css">
-	<script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabenliste</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-	<header>
-		<h1>Meine Responsive Webanwendung</h1>
-	</header>
-	<nav>
-		<ul>
-			<li><a href="#">Startseite</a></li>
-			<li><a href="#">Über uns</a></li>
-			<li><a href="#">Kontakt</a></li>
-		</ul>
-	</nav>
-	<main>
-		<ul id="my-list">
-			<li>
-				<label>
-					<input type="checkbox"> Element 1
-				</label>
-			</li>
-			<li>
-				<label>
-					<input type="checkbox"> Element 2
-				</label>
-			</li>
-			<li>
-				<label>
-					<input type="checkbox"> Element 3
-				</label>
-			</li>
-		</ul>
+    <div id="TaskMaker">
+        <ul>
+            <li>
+                <h1>Task-List</h1>
+            </li>
+            <li><input type="text" id="inputTask" placeholder="task"></li>
+            <li><select name="person" id="inputPerson">
+                    <option value="" disabled selected>victim</option>
+                    <option value="person1">person1</option>
+                    <option value="person2">person2</option>
+                    <option value="person3">person3</option>
+                </select></li>
+            <li><input type="datetime-local" id="inputDate" placeholder="date"></li>
+            <li><input type="text" id="inputInfo" placeholder="info"></li>
+            <li>
+                <div id="addTask"><button id="addTaskBtn">Add task</button></div>
+            </li>
+        </ul>
+    </div>
+    <div id="ContainerTaskList">
+        <ul id="TaskList">
 
-		<form>
-			<input type="text" id="new-item">
-			<button type="button" onclick="addItem()">Hinzufügen</button>
-		</form>
-
-	</main>
-	<footer>
-		<p>&copy; 2023 EIA2</p>
-	</footer>
+        </ul>
+    </div>
 </body>
 
 </html>
