@@ -14,7 +14,7 @@ const addTaskBtn = document.querySelector("#addTaskBtn") as HTMLButtonElement;
 const inputs = document.querySelectorAll("input");
 
 addTaskBtn.addEventListener(`click`, function () {
-  addTask();
+  addTask(); 
 })
 
 function addTask() {
