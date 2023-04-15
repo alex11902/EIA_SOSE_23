@@ -1,4 +1,10 @@
-
+/*
+Aufgabe: L03_Aufgabenliste_DAtenstruktur
+Name: Alexander Holstein
+Matrikel: 271466
+Datum: 15.04.2023
+Quellen: Lars Riehle, W3Schools;
+*/;
 
 namespace Aufgabenliste_datastructure {
 
