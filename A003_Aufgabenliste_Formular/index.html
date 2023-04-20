@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Responsive Webanwendung</title>
-	<link rel="stylesheet" href="style.css">
-	<script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabenliste</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+<<<<<<< HEAD
 	<header>
 		<h1>Meine Responsive Webanwendung</h1>
 	</header>
@@ -47,6 +50,32 @@
 	<footer>
 		<p>&copy; 2023 EIA2</p>
 	</footer>
+=======
+    <div id="TaskMaker">
+        <ul>
+            <li>
+                <h1>Task-List</h1>
+            </li>
+            <li><input type="text" id="inputTask" placeholder="task"></li>
+            <li><select name="person" id="inputPerson">
+                    <option value="" disabled selected>victim</option>
+                    <option value="person1">person1</option>
+                    <option value="person2">person2</option>
+                    <option value="person3">person3</option>
+                </select></li>
+            <li><input type="datetime-local" id="inputDate" placeholder="date"></li>
+            <li><input type="text" id="inputInfo" placeholder="info"></li>
+            <li>
+                <div id="addTask"><button id="addTaskBtn">Add task</button></div>
+            </li>
+        </ul>
+    </div>
+    <div id="ContainerTaskList">
+        <ul id="TaskList">
+
+        </ul>
+    </div>
+>>>>>>> 4b5660bb69117ebefe674c5b63f3111ac300a90a
 </body>
 
 </html>
