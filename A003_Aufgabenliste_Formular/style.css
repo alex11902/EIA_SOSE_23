@@ -60,14 +60,8 @@ input::placeholder {
     color: #ffffff;
 }
 
-<<<<<<< HEAD
-main {
-	background-color:cornflowerblue;
-	padding: 20px;
-=======
 input:hover {
     background-color: #dddddd;
->>>>>>> 4b5660bb69117ebefe674c5b63f3111ac300a90a
 }
 
 input:focus {
@@ -118,13 +112,6 @@ select:focus{
     justify-content: right;
 }
 
-<<<<<<< HEAD
-	footer {
-		clear: both;
-		min-height: calc(100%-50px);
-		background-color:aliceblue;
-	}
-=======
 button {
     border-radius: 5px;
     border: 1px solid #C0C0C0;
@@ -136,25 +123,9 @@ button {
 }
 button:hover{
     background-color: #555555;
->>>>>>> 4b5660bb69117ebefe674c5b63f3111ac300a90a
-}
-button{
-
-<<<<<<< HEAD
-	min-width: 20px;
-	min-height: 20px;
 }
 
-#addItemButton{
 
-	font-family: Avenir, Arial;
-	color: bisque;
-	background-color: teal;
-	border-radius: 8px;
-	font-size: large;
-	border: none;
-	padding: 0.3%;
-=======
 button:active {
     background-color: #000000;
     animation: pulse 0.2s ease-in-out;
@@ -204,5 +175,4 @@ button:active {
 #TaskList button:active {
     background-color: #ff0000;
     animation: pulse 0.2s ease-in-out;
->>>>>>> 4b5660bb69117ebefe674c5b63f3111ac300a90a
 }

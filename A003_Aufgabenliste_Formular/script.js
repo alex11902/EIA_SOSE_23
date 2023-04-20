@@ -8,38 +8,80 @@ Quellen: Lars Riehle, W3Schools;
 */ ;
 var Aufgabenliste_datastructure;
 (function (Aufgabenliste_datastructure) {
-    function addItem() {
-        var input = document.getElementById("new-item");
-        var list = document.getElementById("my-list");
-        var item = document.createElement("li");
-        var label = document.createElement("label");
-        var checkbox = document.createElement("input");
-        var delButton = document.createElement("button");
-        var textItems = document.createElement("h6");
-        checkbox.type = "checkbox";
-        checkbox.value = "hallo";
-        label.appendChild(checkbox);
-        label.appendChild(document.createTextNode(input.value));
-        item.appendChild(label);
-        list.appendChild(item);
-        textItems.appendChild(label);
-        label.appendChild(delButton);
-        input.value = "";
+    const inputTask = document.querySelector("#inputTask");
+    const inputName = document.querySelector("#inputPerson");
+    const inputDate = document.querySelector("#inputDate");
+    const inputInfo = document.querySelector("#inputInfo");
+    const addTaskBtn = document.querySelector("#addTaskBtn");
+    const inputs = document.querySelectorAll("input");
+    // Überprüft, ob es bereits daten im speicher gibt
+    if (localStorage.getItem("tasks")) {
+        const savedTasks = JSON.parse(localStorage.getItem("tasks"));
+        // durchläuft jede aufgabe
+        savedTasks.forEach(function (task) {
+            addTaskToList(task.task, task.name, task.date, task.info);
+        });
     }
-    window.addEventListener("load", finishedLoading);
-    function finishedLoading() {
-        let infoText = "Die website hat geladen";
-        console.log(infoText);
-        let checkBox = document.querySelector("input");
-        let addItemButton = document.querySelector("#addItemButton");
-        checkBox.addEventListener("click", checkBoxWurdeGeklickt);
-        addItemButton.addEventListener("click", textboxwurdeangeklickt);
+    addTaskBtn.addEventListener('click', function () {
+        addTask();
+    });
+    function addTask() {
+        const task = inputTask.value;
+        const name = inputName.value;
+        const date = inputDate.value;
+        const info = inputInfo.value;
+        const taskObj = {
+            task: task,
+            name: name,
+            date: date,
+            info: info
+        };
+        addTaskToList(task, name, date, info);
+        // Speichert die aufgabe im lokalen speicher
+        if (localStorage.getItem("tasks")) {
+            const savedTasks = JSON.parse(localStorage.getItem("tasks"));
+            savedTasks.push(taskObj);
+            localStorage.setItem("tasks", JSON.stringify(savedTasks));
+        }
+        else {
+            localStorage.setItem("tasks", JSON.stringify([taskObj]));
+        }
+        clearInput();
     }
-    function checkBoxWurdeGeklickt() {
-        console.log("input wurde getriggert (checkbox)");
+    function addTaskToList(task, name, date, info) {
+        const Task = document.createElement("li");
+        const taskElem = document.createElement("h1");
+        taskElem.innerHTML = task;
+        const nameElem = document.createElement("p");
+        nameElem.innerHTML = name;
+        const dateElem = document.createElement("p");
+        dateElem.innerHTML = date;
+        const infoElem = document.createElement("p");
+        infoElem.innerHTML = info;
+        const deleteBtn = document.createElement("button");
+        deleteBtn.innerHTML = "delete";
+        deleteBtn.addEventListener('click', function () {
+            deleteTask(Task);
+        });
+        document.querySelector("#TaskList").appendChild(Task);
+        Task.appendChild(taskElem);
+        Task.appendChild(nameElem);
+        Task.appendChild(dateElem);
+        Task.appendChild(infoElem);
+        Task.appendChild(deleteBtn);
     }
-    function textboxwurdeangeklickt() {
-        console.log("du befindest dich im textfeld");
+    function clearInput() {
+        inputs.forEach(function (input) {
+            input.value = "";
+        });
+    }
+    function deleteTask(Task) {
+        //löscht die daten aus dem array
+        const savedTasks = JSON.parse(localStorage.getItem("tasks"));
+        const taskIndex = Array.from(Task.parentNode.children).indexOf(Task);
+        savedTasks.splice(taskIndex, 1);
+        localStorage.setItem("tasks", JSON.stringify(savedTasks));
+        Task.remove();
     }
 })(Aufgabenliste_datastructure || (Aufgabenliste_datastructure = {}));
 //# sourceMappingURL=script.js.map
