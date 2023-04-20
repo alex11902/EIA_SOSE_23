@@ -42,7 +42,7 @@ nav a:hover{
 }
 
 main {
-	background-color: #fff;
+	background-color:cornflowerblue;
 	padding: 20px;
 }
 
@@ -68,7 +68,22 @@ section {
 	footer {
 		clear: both;
 		min-height: calc(100%-50px);
+		background-color:aliceblue;
 	}
 }
+button{
 
+	min-width: 20px;
+	min-height: 20px;
+}
 
+#addItemButton{
+
+	font-family: Avenir, Arial;
+	color: bisque;
+	background-color: teal;
+	border-radius: 8px;
+	font-size: large;
+	border: none;
+	padding: 0.3%;
+}
