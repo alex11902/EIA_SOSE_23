@@ -19,13 +19,13 @@ namespace Aufgabenliste_datastructure {
     const inputs = document.querySelectorAll("input");
   
     // Überprüft, ob es bereits daten im speicher gibt
-    if (localStorage.getItem("tasks")) {
-      const savedTasks = JSON.parse(localStorage.getItem("tasks") as string);
-      // durchläuft jede aufgabe
-      savedTasks.forEach(function (task: any) {
-        addTaskToList(task.task, task.name, task.date, task.info);
-      });
-    }
+    // if (localStorage.getItem("tasks")) {
+    //   const savedTasks = JSON.parse(localStorage.getItem("tasks") as string);
+    //   // durchläuft jede aufgabe
+    //   savedTasks.forEach(function (task: any) {
+    //     addTaskToList(task.task, task.name, task.date, task.info);
+    //   });
+    // }
   
     addTaskBtn.addEventListener('click', function () {
       addTask();
@@ -93,10 +93,10 @@ namespace Aufgabenliste_datastructure {
   
     function deleteTask(Task: HTMLLIElement) {
       //löscht die daten aus dem array
-      const savedTasks = JSON.parse(localStorage.getItem("tasks") as string);
-      const taskIndex = Array.from(Task.parentNode!.children).indexOf(Task);
-      savedTasks.splice(taskIndex, 1);
-      localStorage.setItem("tasks", JSON.stringify(savedTasks));
+      // const savedTasks = JSON.parse(localStorage.getItem("tasks") as string);
+      // const taskIndex = Array.from(Task.parentNode!.children).indexOf(Task);
+      // savedTasks.splice(taskIndex, 1);
+      // localStorage.setItem("tasks", JSON.stringify(savedTasks));
   
       Task.remove();
     }
