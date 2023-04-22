@@ -39,7 +39,7 @@ namespace Aufgabenliste_datastructure {
   
   
   
-      const taskObj = {
+      const taskObj: Task = {
         task: task,
         name: name,
         date: date,

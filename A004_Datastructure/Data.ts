@@ -8,8 +8,8 @@ namespace Aufgabenliste_datastructure {
 
     export let data: Task[] = [
         {
-            task: "Wischen",
-            name: "Anna",
+            task: "Putzen",
+            name: "Peter",
             date: "27.04.2023",
             info: "Gründlich!",
         }
