@@ -1,20 +1,25 @@
-namespace Aufgabenliste_datastructure {
+namespace L04_ToDoList {
+
+
+    // Characteristics of Tasks are being predefined in this interface -> key and value
     export interface Task {
-        task: string;
         name: string;
+        task: string;
+        comment: string;
         date: string;
-        info: string;
+        time: string;
     }
 
+    // Data is predefined
     export let data: Task[] = [
-        {
-            task: "Putzen",
-            name: "Peter",
-            date: "27.04.2023",
-            info: "Gründlich!",
+        { 
+                name: "Anna",
+                task: "Wischen",
+                comment:"Gründlich!",
+                date: "27.04.2023",
+                time: "12:30"
         }
-
+    
     ]
-
-
 }
+

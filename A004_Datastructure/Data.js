@@ -1,13 +1,15 @@
 "use strict";
-var Aufgabenliste_datastructure;
-(function (Aufgabenliste_datastructure) {
-    Aufgabenliste_datastructure.data = [
+var L04_ToDoList;
+(function (L04_ToDoList) {
+    // Data is predefined
+    L04_ToDoList.data = [
         {
-            task: "Putzen",
-            name: "Peter",
+            name: "Anna",
+            task: "Wischen",
+            comment: "Gründlich!",
             date: "27.04.2023",
-            info: "Gründlich!",
+            time: "12:30"
         }
     ];
-})(Aufgabenliste_datastructure || (Aufgabenliste_datastructure = {}));
+})(L04_ToDoList || (L04_ToDoList = {}));
 //# sourceMappingURL=Data.js.map

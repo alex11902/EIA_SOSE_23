@@ -1,177 +1,185 @@
 body {
-    margin: 0px;
-    background-color: #ffffcc;
-}
-  
-  @keyframes rainbow {
-    0% {
-      background-position: 0% 82%;
-    }
-    50% {
-      background-position: 100% 19%;
-    }
-    100% {
-      background-position: 0% 82%;
-    }
-  }
-  
-
-#TaskMaker {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    padding-left: 15%;
-    padding-right: 15%;
-    background-color: #9a9a9a;
+    position: fixed;
+    background-color: #f7e9c6;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
 }
 
-ul {
-    list-style-type: none;
-    width: 50%;
+#addTaskTitleDiv {
+    margin-top: 20px;
+    position: fixed;
+    background-color: #d28e1a;
+    border-radius: 20px;
+    width: 500px;
+    height: 350px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
 }
 
-li {
-    margin-bottom: 10px;
+#bigContainer {
+    margin-top: 800px;
+    width: 400px;
+    height: 400px;
 }
+
 
 h1 {
-    font-size: 64px;
-    font-weight: bold;
+    position: fixed;
     text-align: center;
-    color: #333333;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 60px;
-    margin-bottom: 50px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    top: 4%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+    position: fixed;
+    text-align: center;
+    top: 11%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-small;
+}
+
+
+
+
+.box1 {
+    position: fixed;
+    margin-top: 80px;
+    width: 400px;
+    height: 170px;
+    border-radius: 20px;
+    background-color: #c89179;
+}
+
+#name {
+   margin-left: 5%;
+   margin-top: 4%;
+   width: 20%;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#date {
+   margin-left: 4%;
+   width: 28%;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#time {
+    margin-top: 4%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#task {
+    margin-left: 5%;
+    margin-top: 3%;
+    padding-right: 34%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#comment {
+    margin-left: 5%;
+    margin-top: 3%;
+    padding-right: 25%;
+    padding-bottom: 8%;
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 input {
-    padding: 5px;
-    border-radius: 5px;
-    background-color: #cccccc;
-    border: 1px solid #C0C0C0;
-    width: 45em;
-    height: 2em;
+    border: none;
 }
 
-input::placeholder {
-    color: #ffffff;
+#createTaskButton {
+    position: relative;
+    border-radius: 10%;
+    border-color: transparent;
+    width: 50px;
+    height: 20px;
+    margin-left: 80%;
+    margin: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-input:hover {
-    background-color: #dddddd;
+
+
+.exampleTaskDiv {
+    top: 350px;
+    float: left;
+    width: 360px;
+    height: 120px;
+    border-radius: 20px;
+    background-color: #eed6cc;
+    position: fixed;
+    padding: 20px;
 }
 
-input:focus {
-    outline: none;
-    background-color: #eeeeee;
-    animation: bounce 1s ease-in-out;
+#nameExampleDiv {
+    background-color: white;
 }
 
-@keyframes bounce {
 
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        transform: translateY(0);
-    }
 
-    40% {
-        transform: translateY(-2px);
-    }
 
-    60% {
-        transform: translateY(-1px);
-    }
-}
-select{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: #cccccc;
-    border: 1px solid #C0C0C0;
-    width: 46em;
-    height: 3.1em;
-}
-select:hover {
-    background-color: #dddddd;
-    cursor: pointer;
-}
-select:focus{
-    outline: none;
-    background-color: #eeeeee;
-}
-#addTask {
-    display: flex;
-    justify-content: right;
+#newTaskDiv {
+    positon: ;
+    margin-top: 5%;
+    width: 400px;
+    height: 170px;
+    border-radius: 20px;
+    background-color: #eed6cc;
 }
 
-button {
-    border-radius: 5px;
-    border: 1px solid #C0C0C0;
-    background-color: #666666;
-    color: #ffffff;
-    cursor: pointer;
-    height: 2rem;
-    width: 20%;
-}
-button:hover{
-    background-color: #555555;
+.nameNewTaskDiv {
+    background-color: white;
+    border-radius: 10px;
+    padding: 3px;
+    width: 90px;
+    height: 20px;
 }
 
-button:active {
-    background-color: #000000;
-    animation: pulse 0.2s ease-in-out;
+.dateNewTaskDiv {
+    background-color: white;
+    border-radius: 10px;
+    padding: 3px;
+    width: 90px;
+    height: 20px;
 }
 
-@keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.11);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-
-#ContainerTaskList {
-    width: 100%;
-    min-height: 2rem;
-    border-top: 3px solid#111111;
-}
-#TaskList {
-    margin-left: 25%;
-    text-align: center;
-}
-#TaskList li {
-    color: #C0C0C0;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #555555;
-    border: 0px;
-    border-radius: 2rem;
-    padding: 0.5rem
-}
-#TaskList h1{
-    font-size: 48px;
-    color: #dddddd;
-    font-family:'Times New Roman', Times, serif
-}
-#TaskList button{
-    background-color: #CD2626;
-}
-#TaskList button:hover{
-    background-color: #DE3727;
+.timeNewTaskDiv {
+    background-color: white;
+    border-radius: 10px;
+    padding: 3px;
+    width: 90px;
+    height: 20px;
 }
 
-#TaskList button:active {
-    background-color: #ff0000;
-    animation: pulse 0.2s ease-in-out;
+.taskNewTaskDiv {
+    background-color: white;
+    border-radius: 10px;
+    padding: 3px;
+    width: 90px;
+    height: 20px;
 }
+
+.commentNewTaskDiv {
+    margin-top: 5%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 3px;
+    width: 90px;
+    height: 20px;
+}
+
+#status {
+    position: relative;
+}
+
+.fa-solid fa-x{
+    margin-right: 5%;
+}
+
+
+
+
+
