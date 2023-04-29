@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabenliste Web-App</title>
+    <script src="Data.json"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1> Task List </h1>
+    <div id="div1">
+    </div>
+    <button id="add"> + Add new task </button>
+
+
+
+    <div id="wrapper">
+        <form id="form">
+            <fieldset>
+                <label> Task: </label>
+                <input id="taskn" type="text" name="taskname" placeholder="task"> <br>
+                <label> Until: </label>
+                <input type="datetime-local" name="date" id="date"> <br>
+                <label> Comment: </label>
+                <textarea name="comment" id="comment" placeholder="comment"></textarea> <br>
+                <select name="Person" id="person"> <br>
+                    <option value=" "> --please choose an option-- </option> <br>
+                    <option id="one" value="Alix">Alix</option>
+                    <option value="Andromeda">Andromeda</option>
+                    <option value="James">James</option> <br>
+                </select>
+                <br>
+                <p> <input type="checkbox" id="box" name="box">In progress</p> <br>
+                <button id="add2">add</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
