@@ -13,7 +13,7 @@ var household;
         let taskcollection = (document.querySelector("#summtask"));
         taskcollection.innerHTML = "";
         // for-Schleife durchläuft solang, wie länge des arrays
-        for (let index = 0; index < data.moretasks.length; index++) {
+        for (let index = 0; index < household.data.moretasks.length; index++) {
             //erstellt in HTML Elemente für jeweils eine Aufgabe
             let task = document.createElement("div");
             task.id = "taskelement";
@@ -52,20 +52,20 @@ var household;
             task.appendChild(textdone);
             task.appendChild(check);
             //fügt Werte aus Array in HTML
-            taskname.innerHTML = data.moretasks[index].task;
-            datetime.innerHTML = data.moretasks[index].datetime;
-            personname.innerHTML = data.moretasks[index].person;
-            commenttext.innerHTML = data.moretasks[index].comment;
+            taskname.innerHTML = household.data.moretasks[index].task;
+            datetime.innerHTML = household.data.moretasks[index].datetime;
+            personname.innerHTML = household.data.moretasks[index].person;
+            commenttext.innerHTML = household.data.moretasks[index].comment;
             /* let date = new Date();
             console.log(date); */
-            if (data.moretasks[index].status) {
+            if (household.data.moretasks[index].status) {
                 onedit.checked = true;
             }
             else {
                 done.checked = false;
             }
             //
-            check.checked = data.moretasks[index].status;
+            check.checked = household.data.moretasks[index].status;
             task.appendChild(editbutton);
             editbutton.appendChild(editbuttonI);
             task.appendChild(deletebutton);

@@ -8,13 +8,13 @@ Quellen: <Lara Halmosi,inspiriert von Theresa Hauser>
 */
 var household;
 (function (household) {
-    async function handleLoad() {
+    async function handleData() {
         console.log("async");
         let response = await fetch("data.json");
         let task = await response.text();
-        let data = JSON.parse(task);
-        household.generateTasks(data);
+        household.data = JSON.parse(task);
+        household.generateTasks();
     }
-    household.handleLoad = handleLoad;
+    household.handleData = handleData;
 })(household || (household = {}));
 //# sourceMappingURL=datastructure.js.map

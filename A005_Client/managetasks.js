@@ -18,7 +18,7 @@ var household;
         date = document.querySelector("#choosedate");
         person = document.querySelector("#typename");
         comment = document.querySelector("#typecomment");
-        let addbutton = (document.querySelector("#add"));
+        let addbutton = document.querySelector("#add");
         //let editbutton: HTMLButtonElement = <HTMLButtonElement>document.querySelector("#edit");
         let deletebutton = document.querySelector("#delete");
         household.generateTasks();
@@ -41,7 +41,7 @@ var household;
             comment: commentadd,
             status: false,
         };
-        data.moretasks.push(newTASK);
+        household.data.moretasks.push(newTASK);
         console.log("add new task");
         household.generateTasks();
     }

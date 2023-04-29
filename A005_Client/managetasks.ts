@@ -27,9 +27,7 @@ namespace household {
       person = <HTMLInputElement>document.querySelector("#typename");
       comment = <HTMLInputElement>document.querySelector("#typecomment");
       
-      let addbutton: HTMLButtonElement = <HTMLButtonElement>(
-      document.querySelector("#add")
-    );
+      let addbutton: HTMLButtonElement = <HTMLButtonElement>document.querySelector("#add");
     //let editbutton: HTMLButtonElement = <HTMLButtonElement>document.querySelector("#edit");
     let deletebutton: HTMLButtonElement = <HTMLButtonElement>document.querySelector("#delete");
     generateTasks();
