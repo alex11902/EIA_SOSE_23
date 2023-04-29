@@ -4,8 +4,8 @@ var L05_Client;
     console.log('Hallo');
     /*
       Aufgabe: <Aufgabe 5 Client>
-      Name: <Mareike Bitz>
-      Matrikel: <272506>
+      Name: <Alexander Holstein>
+      Matrikel: <271466>
       Datum: <29.04.23>
       Quellen: <Judith Pauler, Madeleine Hansen>
       */
