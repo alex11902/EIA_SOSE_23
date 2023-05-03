@@ -16,7 +16,7 @@ namespace L05_Client {
     [key: string]: Tasks[];
     };
 
-  interface Tasks {
+  export interface Tasks {
     taskname: string; 
     date: string; 
     comment: string; 
@@ -25,7 +25,7 @@ namespace L05_Client {
   }
 
   function getData(): String[] {
-    let taskArray: String[];
+    let taskArray: string[];
     let formData = new FormData(form);
     console.log(formData);
     let p0 = formData.get('taskname') as string;
@@ -42,7 +42,7 @@ namespace L05_Client {
   let newdiv = document.createElement("div");
   newdiv.setAttribute("id", "newtask");
   let newP = document.createElement("p"); 
-  newdiv.setAttribute("id", "newp");
+  newP.setAttribute("id", "newp");
   let Delete = document.createElement("button");
   Delete.setAttribute("id", "trash");
   Delete.innerHTML = "Delete";
@@ -51,13 +51,16 @@ namespace L05_Client {
   edit.innerHTML = "Edit";
   let wrap = <HTMLElement>document.querySelector("#wrapper");
 
+  let submit: HTMLButtonElement = <HTMLButtonElement>document.querySelector("#add2");
+
   function handleLoad(_event: Event) {
-  let submit: HTMLButtonElement = <HTMLButtonElement>document.querySelector("#add2"); 
+   
   submit.addEventListener("click", sendTask);
   setValue("Data.json");
+  
   };
 
-  window.addEventListener('load', handleLoad);
+  window.addEventListener("load", handleLoad);
 
   async function setValue(_url: RequestInfo): Promise<void> {
     let response: Response = await fetch(_url);

@@ -30,7 +30,7 @@ var L05_Client;
     let newdiv = document.createElement("div");
     newdiv.setAttribute("id", "newtask");
     let newP = document.createElement("p");
-    newdiv.setAttribute("id", "newp");
+    newP.setAttribute("id", "newp");
     let Delete = document.createElement("button");
     Delete.setAttribute("id", "trash");
     Delete.innerHTML = "Delete";
@@ -38,13 +38,13 @@ var L05_Client;
     edit.setAttribute("id", "edit");
     edit.innerHTML = "Edit";
     let wrap = document.querySelector("#wrapper");
+    let submit = document.querySelector("#add2");
     function handleLoad(_event) {
-        let submit = document.querySelector("#add2");
         submit.addEventListener("click", sendTask);
         setValue("Data.json");
     }
     ;
-    window.addEventListener('load', handleLoad);
+    window.addEventListener("load", handleLoad);
     async function setValue(_url) {
         let response = await fetch(_url);
         let offer = await response.text();
