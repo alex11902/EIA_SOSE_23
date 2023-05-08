@@ -6,7 +6,7 @@ var A008_1_generativekunst;
         Name: <Alexander Holstein>
         Matrikel: <271466>
         Datum: <06.05.23>
-        Quellen: Inverted classroom, internetrecherche
+        Quellen: Inverted classroom, Internetrecherche
         */
     let canvas = document.querySelector("canvas");
     let crc2 = canvas.getContext("2d");
