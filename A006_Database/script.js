@@ -21,6 +21,7 @@ var L05_Client;
         let p2 = formData.get('comment');
         let p3 = formData.get('Person');
         let p4 = formData.get('box');
+        console.log(p0);
         taskArray = [p0, p1, p2, p3, p4];
         console.log("getData: " + taskArray);
         taskArray1 = taskArray;
@@ -41,11 +42,14 @@ var L05_Client;
     let submit = document.querySelector("#add2");
     function handleLoad(_event) {
         submit.addEventListener("click", sendTask);
-        setValue("Data.json");
+        setValue("https://webuser.hs-furtwangen.de/~holsteia/Database");
     }
     ;
     window.addEventListener("load", handleLoad);
     async function setValue(_url) {
+        let query = new URLSearchParams();
+        query.set("command", "show");
+        query.set("collection", "Database");
         let response = await fetch(_url);
         let offer = await response.text();
         let dataTemp = JSON.parse(offer);
@@ -81,7 +85,10 @@ var L05_Client;
         this.parentNode.parentNode.removeChild(this.parentNode);
         let formData = new FormData(form);
         let query = new URLSearchParams(formData);
-        await fetch("main.html" + query.toString());
+        query.set("command", "delete");
+        query.set("collection", "Database");
+        query.set("data", JSON.stringify(""));
+        await fetch("http://webuser.hs-furtwangen.de/~holsteia/Database" + query.toString());
     });
 })(L05_Client || (L05_Client = {}));
 //# sourceMappingURL=script.js.map
