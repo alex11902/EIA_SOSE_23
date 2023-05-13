@@ -4,14 +4,13 @@
       Name: <Alexander Holstein>
       Matrikel: <271466>
       Datum: <06.05.23>
-      Quellen: Inverted classroom, Internetrecherche
+      Quellen: Inverted classroom, Lektionsarbeit, mathe von ki
       */
 // Canvas erstellen
 var A008_2_Luftfahrt;
 (function (A008_2_Luftfahrt) {
     const canvasWidth = window.innerWidth;
     const canvasHeight = window.innerHeight;
-    // Canvas erstellen
     // interface Vektor {
     //     x: number;
     //     y: number;
@@ -68,6 +67,7 @@ var A008_2_Luftfahrt;
             crc2.fillStyle = mountainColor;
             crc2.fill();
         }
+        ;
     }
     ;
     // Windhose zeichnen
