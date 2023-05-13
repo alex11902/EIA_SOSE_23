@@ -95,18 +95,7 @@ namespace A008_2_Luftfahrt {
 
 
 
-    // Windhose zeichnen
-    crc2!.strokeStyle = "black";
-    crc2!.lineWidth = 2;
-    crc2!.beginPath();
-    crc2!.moveTo(canvasWidth * 0.85, canvasHeight * 0.5);
-    crc2!.lineTo(canvasWidth * 0.95, canvasHeight * 0.5);
-    crc2!.stroke();
-    crc2!.beginPath();
-    crc2!.moveTo(canvasWidth * 0.9, canvasHeight * 0.45);
-    crc2!.lineTo(canvasWidth * 0.95, canvasHeight * 0.5);
-    crc2!.lineTo(canvasWidth * 0.9, canvasHeight * 0.55);
-    crc2!.stroke();
+    
 
     function getRandomDecimal(): number {
         return parseFloat((Math.random()).toFixed(1));
@@ -149,40 +138,22 @@ namespace A008_2_Luftfahrt {
         crc2.fill();
     }
 
-    function drawWindhose(): void {
+    // function drawWindhose(): void {
 
-        // Position und Größe des Fahnenmasts
-        const poleX = canvasWidth / 2; // Horizontal zentriert
-        const poleY = canvasHeight; // Am unteren Rand des Canvas
-        const poleHeight = canvasHeight / 2; // Die Hälfte der Höhe des Canvas
+    //     // Windhose zeichnen
+    // crc2!.strokeStyle = "black";
+    // crc2!.lineWidth = 2;
+    // crc2!.beginPath();
+    // crc2!.moveTo(canvasWidth * 0.85, canvasHeight * 0.5);
+    // crc2!.lineTo(canvasWidth * 0.95, canvasHeight * 0.5);
+    // crc2!.stroke();
+    // crc2!.beginPath();
+    // crc2!.moveTo(canvasWidth * 0.9, canvasHeight * 0.45);
+    // crc2!.lineTo(canvasWidth * 0.95, canvasHeight * 0.5);
+    // crc2!.lineTo(canvasWidth * 0.9, canvasHeight * 0.55);
+    // crc2!.stroke();
 
-        // Position und Größe der Windhose
-        const whirlwindX = poleX; // Am Fahnenmast
-        const whirlwindY = poleY - poleHeight; // Oberhalb des Fahnenmasts
-        const whirlwindRadius = Math.min(canvasWidth, poleHeight) / 4; // Ein Viertel der kleineren Seitenlänge
-
-        // Anfangs- und Endwinkel der Windhose
-        const startAngle = 0;
-        const endAngle = 2 * Math.PI;
-
-        // Zeichnen des Fahnenmasts
-        crc2.fillStyle = "#a9a9a9"; // Farbe des Fahnenmasts
-        crc2.fillRect(poleX - 5, 0, 10, poleHeight);
-
-        // Zeichnen der Windhose
-        crc2.beginPath();
-        crc2.arc(whirlwindX, whirlwindY, whirlwindRadius, startAngle, endAngle);
-        crc2.closePath();
-
-        // Farbverlauf für die Windhose
-        const gradient = crc2.createRadialGradient(whirlwindX, whirlwindY, 0, whirlwindX, whirlwindY, whirlwindRadius);
-        gradient.addColorStop(0, "#ffffff"); // Innerer Bereich
-        gradient.addColorStop(1, "#a9a9a9"); // Äußerer Bereich
-
-        crc2.fillStyle = gradient;
-        crc2.fill();
-
-    }
+    // }
 
 
     function drawClouds(): void {
@@ -368,6 +339,7 @@ namespace A008_2_Luftfahrt {
            
         }
     }
+
 }
 
 
