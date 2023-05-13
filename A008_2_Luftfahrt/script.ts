@@ -332,7 +332,7 @@ namespace A008_2_Luftfahrt {
              crc2.closePath();
  
              const gradient = crc2.createRadialGradient(stickFigureX, stickFigureY - 40, 0, stickFigureX, stickFigureY - 40, 30);
-             gradient.addColorStop(0, "moccasin"); // Innerer Farbstop (rot)
+             gradient.addColorStop(0,randomColor()); // Innerer Farbstop (rot)
              gradient.addColorStop(1, "black"); // Äußerer Farbstop (weiß)
              crc2.fillStyle = gradient;
              crc2.fill();
