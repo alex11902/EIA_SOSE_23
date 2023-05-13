@@ -77,52 +77,7 @@ namespace A008_2_Luftfahrt {
         }
     };
 
-    // Hintergrund-Berge zeichnen
-    crc2!.fillStyle = "gray";
-    crc2!.beginPath();
-    crc2!.moveTo(canvasWidth * 0.1, canvasHeight);
-    crc2!.lineTo(canvasWidth * 0.5, canvasHeight * 0.4);
-    crc2!.lineTo(canvasWidth * 0.9, canvasHeight);
-    crc2!.closePath();
-    crc2!.fill();
 
-    // Vordergrund-Bäume zeichnen
-    crc2!.fillStyle = "darkgreen";
-    const treeSize = 30;
-    const treePositions = [
-        { x: canvasWidth * 0.15, y: canvasHeight * 0.9 },
-        { x: canvasWidth * 0.25, y: canvasHeight * 0.8 },
-        { x: canvasWidth * 0.35, y: canvasHeight * 0.9 },
-        { x: canvasWidth * 0.45, y: canvasHeight * 0.85 },
-        { x: canvasWidth * 0.55, y: canvasHeight * 0.95 },
-        { x: canvasWidth * 0.65, y: canvasHeight * 0.9 },
-        { x: canvasWidth * 0.75, y: canvasHeight * 0.85 },
-        { x: canvasWidth * 0.85, y: canvasHeight * 0.9 },
-    ];
-    treePositions.forEach((position) => {
-        crc2!.fillRect(position.x - treeSize / 2, position.y - treeSize, treeSize, treeSize);
-    });
-
-    // Elliptischen Landeplatz zeichnen
-    const landingPadWidth = 150;
-    const landingPadHeight = 100;
-    const landingPadX = canvasWidth / 2 - landingPadWidth / 2;
-    const landingPadY = canvasHeight * 0.75 - landingPadHeight / 2;
-    crc2!.fillStyle = "black";
-    crc2!.ellipse(
-        landingPadX + landingPadWidth / 2,
-        landingPadY + landingPadHeight / 2,
-        landingPadWidth / 2,
-        landingPadHeight / 2,
-        0,
-        0,
-        2 * Math.PI
-    );
-    crc2!.fill();
-
-    // Kiosk zeichnen
-    crc2!.fillStyle = "red";
-    crc2!.fillRect(canvasWidth * 0.8, canvasHeight * 0.7, 50, 80);
 
     // Windhose zeichnen
     crc2!.strokeStyle = "black";
@@ -141,17 +96,8 @@ namespace A008_2_Luftfahrt {
         return parseFloat((Math.random()).toFixed(1));
     }
 
-    function randomColor(): string {
-
-        const r = Math.floor(Math.random() * 256);
-        const g = Math.floor(Math.random() * 256);
-        const b = Math.floor(Math.random() * 256);
-        return `rgb(${r}, ${g}, ${b})`;
-
-    }
+    
     // Sonne im oberen rechten Rand zeichnen
-
-
     function drawSun() {
         let sunRadius = Math.min(40) + getRandomDecimal() * 100;
         let sunX = canvasWidth - sunRadius - 20;
@@ -162,13 +108,23 @@ namespace A008_2_Luftfahrt {
         crc2!.fill();
     }
 
-    function drawMountain() {
+    function drawMountain(){
 
-        crc2!.fillStyle = "grey";
+        const mountainColor = "#a9a9a9";
+        const mountainHeight = canvasHeight / 2; // Die Hälfte der Höhe des Canvas
+
+        // Position und Breite des Berges
+        const mountainX = 0; // Linker Rand des Canvas
+        const mountainWidth = canvasWidth / 4; // 1/4 der Breite des Canvas
+
+        // Zeichnen des Berges
         crc2!.beginPath();
-        crc2!.moveTo(0, canvasHeight / 3);
-        crc2!.lineTo(canvasWidth / 4, canvasHeight / 1.8 + 120);
-        crc2!.lineTo(canvasWidth - canvasWidth * 1, canvasHeight - 150)
+        crc2!.moveTo(mountainX, canvasHeight);
+        crc2!.lineTo(mountainX + mountainWidth / 2, canvasHeight - mountainHeight);
+        crc2!.lineTo(mountainX + mountainWidth, canvasHeight);
+        crc2!.closePath();
+
+        crc2!.fillStyle = mountainColor;
         crc2!.fill();
     }
 
