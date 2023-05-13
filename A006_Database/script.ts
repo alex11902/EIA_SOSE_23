@@ -32,7 +32,8 @@ namespace L05_Client {
     let p1 = formData.get('date') as string;
     let p2 = formData.get('comment') as string;
     let p3 = formData.get('Person') as string;
-    let p4 = formData.get('box') as string; 
+    let p4 = formData.get('box') as string;
+    console.log(p0)
     taskArray = [p0, p1, p2, p3, p4];
     console.log("getData: " + taskArray);
     taskArray1 = taskArray; 
@@ -56,13 +57,16 @@ namespace L05_Client {
   function handleLoad(_event: Event) {
    
   submit.addEventListener("click", sendTask);
-  setValue("Data.json");
+  setValue("https://webuser.hs-furtwangen.de/~holsteia/Database");
   
   };
 
   window.addEventListener("load", handleLoad);
 
   async function setValue(_url: RequestInfo): Promise<void> {
+    let query: URLSearchParams = new URLSearchParams()
+    query.set("command","show");
+    query.set("collection","Database")
     let response: Response = await fetch(_url);
     let offer: string= await response.text();
     let dataTemp: Datainput = JSON.parse(offer);
@@ -102,7 +106,10 @@ namespace L05_Client {
     this!.parentNode!.parentNode!.removeChild(this!.parentNode!);
     let formData: FormData = new FormData(form);
     let query: URLSearchParams = new URLSearchParams(<any>formData);
-    await fetch("main.html"+ query.toString()); 
+    query.set("command","delete");
+    query.set("collection","Database");
+    query.set("data", JSON.stringify( "" ));
+    await fetch("http://webuser.hs-furtwangen.de/~holsteia/Database"+ query.toString()); 
   });
 
 }
