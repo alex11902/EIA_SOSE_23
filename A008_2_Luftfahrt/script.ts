@@ -300,7 +300,7 @@ namespace A008_2_Luftfahrt {
              crc2.beginPath();
              crc2.arc(stickFigureX, stickFigureY , 45,  Math.PI * 1,0);
              crc2.closePath();
- 
+
              const gradient = crc2.createRadialGradient(stickFigureX, stickFigureY - 40, 0, stickFigureX, stickFigureY - 40, 30);
              gradient.addColorStop(0,randomColor()); // Innerer Farbstop (rot)
              gradient.addColorStop(1, "black"); // Äußerer Farbstop (weiß)
