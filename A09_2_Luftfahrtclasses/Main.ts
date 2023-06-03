@@ -9,7 +9,7 @@ Quellen: <insects and windsock inspired by Marie Eckl, chat GPT, mozilla.org>
 namespace LuftfahrtClasses {
  
   window.addEventListener("load",handleLoad);
-  //export let crc2: CanvasRenderingContext2D;
+  export let crc2: CanvasRenderingContext2D;
   let golden: number = 0.62;
   let background: ImageData;
   

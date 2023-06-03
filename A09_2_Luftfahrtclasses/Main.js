@@ -10,7 +10,6 @@ Quellen: <insects and windsock inspired by Marie Eckl, chat GPT, mozilla.org>
 var LuftfahrtClasses;
 (function (LuftfahrtClasses) {
     window.addEventListener("load", handleLoad);
-    //export let crc2: CanvasRenderingContext2D;
     let golden = 0.62;
     let background;
     function handleLoad(_event) {
