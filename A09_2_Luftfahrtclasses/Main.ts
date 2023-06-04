@@ -3,7 +3,7 @@ Aufgabe: <L09.2_Luftfahrt_Classes>
 Name: <Alexander Vincent Holstein>
 Matrikel: <271466>
 Datum: <31.05.2023>
-Quellen: <insects and windsock inspired by Marie Eckl, chat GPT, mozilla.org>
+Quellen: <Lara Halmosi,insects and windsock inspired by Marie Eckl, chat GPT, mozilla.org>
 */
 // Handle-load function
 namespace LuftfahrtClasses {
