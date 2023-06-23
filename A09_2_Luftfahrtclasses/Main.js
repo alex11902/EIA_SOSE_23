@@ -4,7 +4,7 @@ Aufgabe: <L09.2_Luftfahrt_Classes>
 Name: <Alexander Vincent Holstein>
 Matrikel: <271466>
 Datum: <31.05.2023>
-Quellen: <insects and windsock inspired by Marie Eckl, chat GPT, mozilla.org>
+Quellen: <Lara Halmosi,insects and windsock inspired by Marie Eckl, chat GPT, mozilla.org>
 */
 // Handle-load function
 var LuftfahrtClasses;
@@ -28,16 +28,16 @@ var LuftfahrtClasses;
         console.log(drawStaticObjects);
         let hotairballoon = new LuftfahrtClasses.HotAirBalloon(4);
         console.log(hotairballoon);
-        LuftfahrtClasses.createHotairballoons(4);
-        LuftfahrtClasses.HotAirBalloons.push(hotairballoon);
+        createHotairballoons(4);
+        HotAirBalloons.push(hotairballoon);
         let paraglider = new LuftfahrtClasses.Paraglider(5);
         console.log(paraglider);
-        LuftfahrtClasses.createParagliders(1);
-        LuftfahrtClasses.Paragliders.push(paraglider);
+        createParagliders(1);
+        Paragliders.push(paraglider);
         let insect = new LuftfahrtClasses.Insect(1);
         console.log(insect);
-        LuftfahrtClasses.createInsects(5);
-        LuftfahrtClasses.Insects.push(insect);
+        createInsects(5);
+        Insects.push(insect);
         window.requestAnimationFrame(update);
         window.setInterval(update, 20);
     }
@@ -267,11 +267,11 @@ var LuftfahrtClasses;
     function update() {
         LuftfahrtClasses.crc2.clearRect(0, 0, LuftfahrtClasses.crc2.canvas.width, LuftfahrtClasses.crc2.canvas.height);
         LuftfahrtClasses.crc2.putImageData(background, 0, 0);
-        for (let hotairballoon of LuftfahrtClasses.HotAirBalloons) {
+        for (let hotairballoon of HotAirBalloons) {
             hotairballoon.move(1 / 300);
             hotairballoon.draw();
         }
-        for (let insect of LuftfahrtClasses.Insects) {
+        for (let insect of Insects) {
             insect.move(1 / 70);
             insect.draw();
         }
