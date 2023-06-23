@@ -1,6 +1,6 @@
 "use strict";
-var LuftfahrtClasses;
-(function (LuftfahrtClasses) {
+var LuftfahrtPolymorphie;
+(function (LuftfahrtPolymorphie) {
     class Vector {
         x;
         y;
@@ -15,9 +15,19 @@ var LuftfahrtClasses;
             this.x *= _factor;
             this.y *= _factor;
         }
+        scaleReturn(_factor) {
+            this.x *= _factor;
+            this.y *= _factor;
+            return this;
+        }
         add(_addend) {
             this.x += _addend.x;
             this.y += _addend.y;
+        }
+        addReturn(_addend) {
+            this.x += _addend.x;
+            this.y += _addend.y;
+            return this;
         }
         random(_minLength, _maxLength) {
             let length = _minLength + Math.random() * (_maxLength - _minLength);
@@ -25,7 +35,13 @@ var LuftfahrtClasses;
             this.set(Math.cos(direction), Math.sin(direction));
             this.scale(length);
         }
+        subtract(_vector) {
+            return new Vector(this.x - _vector.x, this.y - _vector.y);
+        }
+        copy() {
+            return new Vector(this.x, this.y);
+        }
     }
-    LuftfahrtClasses.Vector = Vector;
-})(LuftfahrtClasses || (LuftfahrtClasses = {}));
+    LuftfahrtPolymorphie.Vector = Vector;
+})(LuftfahrtPolymorphie || (LuftfahrtPolymorphie = {}));
 //# sourceMappingURL=Vector.js.map
