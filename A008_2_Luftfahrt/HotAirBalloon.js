@@ -38,7 +38,7 @@ var LuftfahrtPolymorphie;
             // Ballon
             LuftfahrtPolymorphie.crc2.beginPath();
             LuftfahrtPolymorphie.crc2.arc(this.position.x, this.position.y, 25, 0, Math.PI * 2);
-            LuftfahrtPolymorphie.crc2.fillStyle = "orange";
+            LuftfahrtPolymorphie.crc2.fillStyle = "magenta";
             LuftfahrtPolymorphie.crc2.fill();
             LuftfahrtPolymorphie.crc2.closePath();
             // Seile
@@ -54,7 +54,7 @@ var LuftfahrtPolymorphie;
             // Korb
             LuftfahrtPolymorphie.crc2.beginPath();
             LuftfahrtPolymorphie.crc2.rect(this.position.x - 12.5, this.position.y + 45, 25, 20);
-            LuftfahrtPolymorphie.crc2.fillStyle = "brown";
+            LuftfahrtPolymorphie.crc2.fillStyle = "green";
             LuftfahrtPolymorphie.crc2.fill();
             LuftfahrtPolymorphie.crc2.closePath();
         }
